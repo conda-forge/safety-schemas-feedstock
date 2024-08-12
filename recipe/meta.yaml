@@ -1,4 +1,4 @@
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: safety-schemas
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety-schemas/safety_schemas-{{ version }}.tar.gz
-  sha256: 7d1b040ec06480f05cff6b45ea7a93e09c8942df864fb0d01ddeb67c323cfa8c
+  sha256: b39554f9c010e4f11f7c9e5773eb31d2c96c164f7a595c273a98b074d0fb98f4
 
 build:
   noarch: python
-  script: 
-    - {{ PYTHON }} -c "from pathlib import Path; [p.unlink() for p in Path.cwd().rglob('.DS_Store')]" 
+  script:
+    - {{ PYTHON }} -c "from pathlib import Path; [p.unlink() for p in Path.cwd().rglob('.DS_Store')]"
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -21,11 +21,11 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - python >=3.7.0
-    - pydantic
     - dparse >=0.6.4b0
     - ruamel.yaml >=0.17.21
     - packaging >=21.0
+    - pydantic
+    - python >=3.7.0
     - typing-extensions >=4.7.1
 
 test:
