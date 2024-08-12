@@ -21,11 +21,11 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - python >=3.7.0
-    - pydantic
     - dparse >=0.6.4b0
     - ruamel.yaml >=0.17.21
     - packaging >=21.0
+    - pydantic
+    - python >=3.7.0
     - typing-extensions >=4.7.1
 
 test:
