@@ -1,4 +1,4 @@
-{% set version = "0.0.5" %}
+{% set version = "0.0.6" %}
 
 package:
   name: safety-schemas
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety-schemas/safety_schemas-{{ version }}.tar.gz
-  sha256: 0de5fc9a53d4423644a8ce9a17a2e474714aa27e57f3506146e95a41710ff104
+  sha256: 1b6aea4fc91c00c57eb1e6e059c44fd1673cd176765895cc6aba2532dc1bab10
 
 build:
   noarch: python
