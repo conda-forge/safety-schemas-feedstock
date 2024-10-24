@@ -1,4 +1,4 @@
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: safety-schemas
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/safety-schemas/safety_schemas-{{ version }}.tar.gz
-  sha256: 1b6aea4fc91c00c57eb1e6e059c44fd1673cd176765895cc6aba2532dc1bab10
+  sha256: 7526a9a5832edf1727b40c392fbc64b351d87a8649467a6d18b6839e0204cfeb
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - dparse >=0.6.4b0
     - ruamel.yaml >=0.17.21
     - packaging >=21.0
-    - pydantic
+    - pydantic >=2.5.0,<2.6
     - python >=3.7.0
     - typing-extensions >=4.7.1
 
