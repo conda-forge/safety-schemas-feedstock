@@ -10,11 +10,11 @@ source:
   sha256: 23044f88aa21213980b00e6002cf56229e1efc2b6cbdde3e90fc781ca6bbc217
 
 build:
+  number: 0
   noarch: python
   script:
     - {{ PYTHON }} -c "from pathlib import Path; [p.unlink() for p in Path.cwd().rglob('.DS_Store')]"
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
 
 requirements:
   host:
