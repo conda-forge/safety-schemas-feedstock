@@ -1,34 +1,38 @@
-{% set version = "0.0.8" %}
+{% set version = "0.0.9" %}
+{% set python_min = python_min | default("3.9") %}
 
 package:
   name: safety-schemas
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/safety-schemas/safety_schemas-{{ version }}.tar.gz
-  sha256: f4c63b7012facc2f59b9abcbe48acfd5bd5068e58e62d39753db4667499320fa
+  url: https://pypi.org/packages/source/s/safety-schemas/safety_schemas-{{ version }}.tar.gz
+  sha256: 23044f88aa21213980b00e6002cf56229e1efc2b6cbdde3e90fc781ca6bbc217
 
 build:
+  number: 0
   noarch: python
   script:
     - {{ PYTHON }} -c "from pathlib import Path; [p.unlink() for p in Path.cwd().rglob('.DS_Store')]"
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
 
 requirements:
   host:
     - hatchling
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - dparse >=0.6.4b0
+    - dparse >=0.6.4
     - ruamel.yaml >=0.17.21
     - packaging >=21.0
-    - pydantic >=2.5.0,<2.6
-    - python >=3.7.0
+    - pydantic >=2.5.0,<2.10.0
+    - python >={{ python_min }}
     - typing-extensions >=4.7.1
 
 test:
+  requires:
+    - pip
+    - python {{ python_min }}
   imports:
     - safety_schemas
     - safety_schemas.models
@@ -36,8 +40,6 @@ test:
     - safety_schemas.config
   commands:
     - pip check
-  requires:
-    - pip
 
 about:
   home: https://pypi.org/project/safety-schemas
