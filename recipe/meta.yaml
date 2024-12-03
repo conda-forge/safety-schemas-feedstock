@@ -1,4 +1,4 @@
-{% set version = "0.0.9" %}
+{% set version = "0.0.10" %}
 {% set python_min = python_min | default("3.9") %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety-schemas/safety_schemas-{{ version }}.tar.gz
-  sha256: 23044f88aa21213980b00e6002cf56229e1efc2b6cbdde3e90fc781ca6bbc217
+  sha256: 5ec83bb19e17003748d2a4b11e43e1f2b4471c9434329e9a0d80d1069966b96c
 
 build:
   number: 0
