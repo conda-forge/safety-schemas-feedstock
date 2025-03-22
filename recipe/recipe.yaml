@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.0.11
+  version: "0.0.12"
 
 package:
   name: safety-schemas
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety-schemas/safety_schemas-${{ version }}.tar.gz
-  sha256: 10804372e077ca5a95e740cc507e73d9173663284006fcaaf5756179ba13ac9d
+  sha256: 8b87a3013200f4c0eff99982c678f9ae862478a3da2aa934ec07021f7fc0b5c0
 
 build:
   number: 0
