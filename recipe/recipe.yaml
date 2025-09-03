@@ -27,7 +27,7 @@ requirements:
     - dparse >=0.6.4
     - ruamel.yaml >=0.17.21
     - packaging >=21.0
-    - pydantic >=2.6.0,<2.10.0
+    - pydantic >=2.6.0
     - python >=${{ python_min }}
     - typing_extensions >=4.7.1
 
