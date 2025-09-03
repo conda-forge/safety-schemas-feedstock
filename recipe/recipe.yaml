@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.0.14"
+  version: "0.0.15"
 
 package:
   name: safety-schemas
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety-schemas/safety_schemas-${{ version }}.tar.gz
-  sha256: 49953f7a59e919572be25595a8946f9cbbcd2066fe3e160c9467d9d1d6d7af6a
+  sha256: cc072d7230df07c80dbe7b8919b0549089b97f8c7ea6710ad6fa141fe3c0d598
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - dparse >=0.6.4
     - ruamel.yaml >=0.17.21
     - packaging >=21.0
-    - pydantic >=2.6.0,<2.10.0
+    - pydantic >=2.6.0
     - python >=${{ python_min }}
     - typing_extensions >=4.7.1
 
