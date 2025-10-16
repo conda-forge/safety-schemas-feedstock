@@ -3,6 +3,7 @@ schema_version: 1
 
 context:
   version: "0.0.17"
+  cov_fail_under: "65"
 
 package:
   name: safety-schemas
@@ -25,10 +26,10 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - dparse >=0.6.4
-    - ruamel.yaml >=0.17.21
     - packaging >=21.0
     - pydantic >=2.6.0
     - python >=${{ python_min }}
+    - ruamel.yaml >=0.17.21
     - typing_extensions >=4.7.1
 
 tests:
@@ -36,7 +37,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - 3.14.*
       imports:
         - safety_schemas
         - safety_schemas.models
@@ -52,7 +53,7 @@ tests:
         - deepdiff
     script:
       - coverage run --source safety_schemas --branch -m pytest -vv --tb=long --color=yes --import-mode=importlib
-      - coverage report --show-missing --skip-covered --fail-under=65
+      - coverage report --show-missing --skip-covered --fail-under=${{ cov_fail_under }}
 
 about:
   summary: Schemas for Safety CLI
