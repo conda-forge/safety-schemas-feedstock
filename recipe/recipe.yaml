@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - hatchling
+    - hatchling ==1.26.3
     - pip
     - python ${{ python_min }}.*
   run:
