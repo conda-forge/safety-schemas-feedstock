@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.0.21"
+  version: "0.0.22"
   cov_fail_under: "65"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/safety-schemas/safety_schemas-${{ version }}.tar.gz
-  sha256: 06b6d289464ad151c3adb9e831eea31f9a2280d0b9bcd37503dbb0d03d3425f2
+  sha256: 4dd4c016bc0e4c6eb3e91e0bb87904cbac02f8a54a82a1be38fcce214dd2df53
 
 build:
   number: 0
